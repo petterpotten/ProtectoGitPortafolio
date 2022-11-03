@@ -1,0 +1,257 @@
+/*Hoja Estilos para Portafolio*/
+:root{
+    --blue-primary: #007acc;
+    --gray-primary: #3e3e42;
+    --gray-secondary: #2d2d30;
+    --dark-primary: #1e1e1e;
+    --dark-secondary: #252526;
+    --white: #fff;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--dark-secondary);
+}
+h1,h2,h3,h4,h5,p{
+    color: var(--white);
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+img{
+    max-width: 100%;
+}
+
+.navbar{
+    color: var(--white);
+    height: 10vh;
+}
+
+.navbar-bg{
+    background-color: var(--dark-primary);
+}
+
+.menu__link{
+    color: var(--white);
+}
+
+.menu__link:hover{
+    color: var(--gray-primary);
+}
+
+
+.main{
+    background: var(--gray-secondary);
+    height: 85vh;
+}
+
+.title{
+    font-size: 3rem;
+}
+.profile-img{
+    width: 500px;
+    height: 500px;
+    position:relative;
+    left: 90px;
+    display: block;
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius:50%;
+}
+.project-img{
+    height: 2-.5rem; 
+    width: 20.5rem;
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius:50%;
+}
+.projectqr-img{
+    /* height: 2-.5rem; */
+    width: 18.5rem;
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius:10%;
+}
+
+.tecnology{
+    background-color: var(--dark-primary);
+    height: 95vh;
+}
+
+.tecnology-img{
+    width: 10.8rem;
+    height: 10.8rem;
+    -moz-border-radius: 0%;
+    -webkit-border-radius: 0%;
+    border-radius:10%;
+}
+
+.form-container{
+    max-width: 54rem;
+    width: 95%;
+    background-color: var(--gray-primary);
+    border-radius: 1rem;
+}
+
+input[type="text"]{
+    font-size: 1.5rem !important;
+}
+
+.footer{
+    background-color: var(--gray-secondary);
+    color: var(--white);
+}
+
+/*Emergente flotante para regresar al menú*/
+.regresa_menu_container{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}   
+
+.regresa_menu_boton{
+
+    width: 0rem;
+    height: 0rem;
+    background:#C1052C;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.regresa_menu_boton i{
+
+   position: absolute;
+   font-size: 1.7rem;
+   top:48%;
+   left:50%;
+   transform: translate(-50%, -50%) scale(0);
+   color: #FFFFFF;
+   transition: .2s; 
+}
+.show{
+    z-index: 10;
+}
+.show .regresa_menu_boton{
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 11;
+}
+.show i{
+     transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height:8rem;
+    } 
+    100%{
+        width: 6.6rem;
+        height:6.6rem;
+    }     
+}
+/*PopUp para abrir (zoom) imagen al dar clic*/
+#imgpersona {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    #imgpersona:hover {
+        opacity: 0.7;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#descripcion {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #descripcion {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
