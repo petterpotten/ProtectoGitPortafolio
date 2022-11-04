@@ -101,3 +101,34 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
 	modal.style.display = "none";
 }
+
+// Progress Barr After Effects
+function transicionProgressBar()
+{
+	var iAfterProgressbar = document.getElementById('iAfterProgressbar');
+	var iJSProgressbar = document.getElementById('iJSProgressbar'); 
+	var iAnimateProgressbar = document.getElementById('iAnimateProgressbar');
+	var iPhpProgressbar = document.getElementById('iPhpProgressbar');
+	var iPhotoshopProgressbar = document.getElementById('iPhotoshopProgressbar'); 
+	var iJQProgressbar = document.getElementById('iJQProgressbar'); 
+	var iMySqlProgressbar = document.getElementById('iMySqlProgressbar'); 
+	var iCSSProgressbar = document.getElementById('iCSSProgressbar'); 
+	var iHTMLProgressbar = document.getElementById('iHTMLProgressbar'); 
+	var iPremiereProgressbar = document.getElementById('iPremiereProgressbar'); 
+	var iVBProgressbar = document.getElementById('iVBProgressbar');
+	var iOfficeProgressbar = document.getElementById('iOfficeProgressbar'); 
+
+
+	iAfterProgressbar.classList.toggle("FinalProgressBar45");
+	iJSProgressbar.classList.toggle("FinalProgressBar55");
+	iAnimateProgressbar.classList.toggle("FinalProgressBar65"); 
+	iPhpProgressbar.classList.toggle("FinalProgressBar65"); 
+	iPhotoshopProgressbar.classList.toggle("FinalProgressBar75");
+	iJQProgressbar.classList.toggle("FinalProgressBar75");
+	iMySqlProgressbar.classList.toggle("FinalProgressBar80");
+	iCSSProgressbar.classList.toggle("FinalProgressBar85");
+	iHTMLProgressbar.classList.toggle("FinalProgressBar90"); 
+	iPremiereProgressbar.classList.toggle("FinalProgressBar95"); 
+	iVBProgressbar.classList.toggle("FinalProgressBar95"); 
+	iOfficeProgressbar.classList.toggle("FinalProgressBar100");
+}
